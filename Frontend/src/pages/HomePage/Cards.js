@@ -4,12 +4,11 @@ import Card from "./Card";
 import { useSelector } from "react-redux";
 
 const Cards = () => {
-  const cards = useSelector((state) => state.cards);
-
+  const cards = useSelector((state) => state.home.data);
   return (
     <>
       <Container>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 , mt: 15}}>
           <Grid container spacing={2}>
             {cards &&
               cards.map((card) => {

@@ -6,13 +6,15 @@ const SingCard = ({ card }) => {
   console.log(card);
   return (
     <>
-      <Card sx={{ maxWidth: 1100 }}>
-        <CardMedia component="img" image={img} alt={`${title}`} />
+      <Card sx={{ maxWidth: 250 }}>
+        <CardMedia component="img" height="200" image={img} alt={`${title}`} />
         <CardContent>
           <Typography variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2">{desc}</Typography>
+          <Typography variant="body2">
+            {desc}
+          </Typography>
         </CardContent>
       </Card>
     </>

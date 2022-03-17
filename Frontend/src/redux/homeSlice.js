@@ -12,14 +12,14 @@ export const getDataHome = createAsyncThunk(
     console.log(err);
   }
 });
-// home slice
-const homeSlices = createSlice({
+
+export const homeSlice = createSlice({
   name: "home",
   initialState: {
     data: [],
     status: null,
   },
-  reducer: {
+  extraReducers: {
     [getDataHome.pending]: (state, action) => {
       state.status = "loading";
     },
@@ -33,4 +33,4 @@ const homeSlices = createSlice({
   },
 });
 
-export default homeSlices.reducer;
+export default homeSlice.reducer;
